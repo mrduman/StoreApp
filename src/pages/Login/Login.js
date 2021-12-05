@@ -11,10 +11,11 @@ export default function Login() {
             <View style={styles.logo_container}>
                 <Image style={styles.image} source={require('../../asstes/logo-icon.png')} />
             </View>
-            <Input placeholder='Text to Username' />
-            <Input placeholder='Text to Password' />
-            <Button text='Login' />
             <View style={styles.body_container}>
+                <Input placeholder='Text to Username' />
+                <Input placeholder='Text to Password' />
+                <Button text='Login' />
+
                 <Text></Text>
             </View>
         </View>
