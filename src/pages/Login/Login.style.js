@@ -24,6 +24,13 @@ export default StyleSheet.create ({
     body_container : {
         flex : 1,
         
-
+        
+    },
+    text : {
+        color : 'crimson',
+        fontWeight : 'bold',
+        marginBottom : 10,
+        left : 12,
+        marginTop :2
     }
 })
