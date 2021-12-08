@@ -7,12 +7,15 @@ import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
 import usePost from "../../hooks/usePost";
 import Config from "react-native-config";
-import  AsyncStorage  from "@react-native-async-storage/async-storage";
+
+import { useDispatch } from "react-redux";
+
 
 
 export default function Login({ navigation }) {
 
     const { data, error, loading, post } = usePost();
+    const dispatch = useDispatch();
 
     function handleLogin(values) {
         post(Config.API_AUTH_URL + '/login', values);
@@ -28,6 +31,7 @@ export default function Login({ navigation }) {
             Alert.alert('Store', 'User have not found')
         }
         else {
+            dispatch({type : 'SET_USER' , payload : {user}})
             navigation.navigate('ProductsPage')
         }
     }
@@ -47,6 +51,7 @@ export default function Login({ navigation }) {
 
     })
 
+   
 
     return (
         <View style={styles.container}>
@@ -95,3 +100,15 @@ export default function Login({ navigation }) {
 
 }
 
+const user = 
+{"address":{"geolocation":{"lat":"50.3467","long":"-20.1310"},
+"city":"San Antonio",
+"street":"Hunters Creek Dr",
+"number":6454,
+"zipcode":"98234-1734"},
+"id":4,
+"email":"don@gmail.com",
+"username":"donero",
+"password":"ewedon",
+"name":{"firstname":"don","lastname":"romer"},
+"phone":"1-765-789-6734","__v":0}
