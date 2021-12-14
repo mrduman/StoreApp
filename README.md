@@ -17,7 +17,3 @@
 
 <img src = 'https://user-images.githubusercontent.com/83928108/143909817-e2835ed4-ec5c-4a0e-b7f7-0b0d108a94a2.png' width = '350' height = '600'>
 
-![Screenshot_1638996426]()
-![Screenshot_1638996435]()
-![Screenshot_1638996448]()
-![Screenshot_1638996470]()
